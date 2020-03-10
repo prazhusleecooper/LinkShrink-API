@@ -39,7 +39,7 @@ module.exports = {
         originalLink: req.body.originalLink,
         shrinkedLink: shrunkLink,
       });
-      return res.status(200).send(shrunkLink);
+      return res.status(200).send({shrunkLink: shrunkLink});
     } catch (error) {
       console.log('THE ERROR CREATING LINK IS::', error);
       res.serverError('Error shrinking link. Please try again');
