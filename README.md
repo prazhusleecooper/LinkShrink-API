@@ -2,6 +2,96 @@
 
 a [Sails v1](https://sailsjs.com) application
 
+## DESCRIPTION:
+Hello! This is one of my leisure applications. 
+This application is a simple link shrinker that is built on **Sails Js** with **MongoDB** as a database
+> THIS ONLY ONLY THE BACKEND API - DOESNOT CONTAIN FRONT END APP
+> You can fetch the following links from your frontend to obtain the required resource
+
+### API FETCH LINKS:
+
+- To Shrink a link:
+
+------------
+
+**POST** METHOD
+
+------------
+`fetch('<Your local IP>:<PORT>/shrinkLink')`
+
+
+
+
+with the request body:
+`{"originalLink": "<yourURL>"}`
+Example fetch() method - ReactJS:
+```javascript
+ fetch('http://localhost:1338/shrinkLink',
+    {
+         method: 'POST',
+         mode: 'cors',
+         headers: {'Content-Type': 'application/json'}
+    }
+    )
+    .then(res => res.json())
+    .then(
+         (result) => {
+              console.log('THE SHRUNK LINK IS:', result.shrunkLink);
+         },
+         (error) => {
+              console.log('ERROR:', error);
+         },
+    );
+```
+
+------------
+
+
+------------
+
+
+------------
+
+
+- To get the original link by providing the shrunk link:
+
+------------
+
+**GET** METHOD
+
+------------
+`fetch('<Your local IP>:<PORT>/<your shrunk link>')`
+Example fetch() method - ReactJS:
+```javascript
+ fetch('http://localhost:1338/CoL2',
+    {
+         method: 'POST',
+         mode: 'cors',
+         headers: {'Content-Type': 'application/json'}
+    }
+    )
+    .then(res => res.json())
+    .then(
+         (result) => {
+              console.log('THE SHRUNK LINK IS:', result.shrunkLink);
+         },
+         (error) => {
+              console.log('ERROR:', error);
+         },
+    );
+```
+
+------------
+
+
+------------
+
+
+------------
+
+
+
+
 
 ### Links
 
